@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(157, 157, 157);
+        }
+
+        .info {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .bilde {
+            display: flex;
+            flex-direction: row;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 5px solid black;
+            margin-left: 0px;
+            overflow: hidden;
+
+        }
+
+        .hobby:hover {
+            color: rgb(0, 255, 47);
+            border: 3px;
+            margin: 20px;
+            padding: 20px;
+
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hobby {
+            color: rgb(0, 0, 0);
+            border: 3px;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rødOgFin {
+            background-color: red;
+        }
+
+        .roterh {
+            float: left;
+            transform: rotate(12deg);
+            -webkit-transform: rotate(12deg);
+            animation: rightrot 6s linear infinite;
+        }
+
+        @keyframes rightrot {
+            from {
+                transform: rotate(370deg);
+            }
+
+            to {
+                transform: 370deg;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="info">
+
+        <h2>Hallo, mitt navn er Alexander Wiese<br>Jeg er 25 år, og er utdannet som bilmekaniker &#128513;</h2>
+
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+            Klikk meg for å sjekke klokka!</button>
+        <p id="demo"></p>
+
+        <input type="button" value="Klikk meg for å endre farge til rød" onclick="chBackcolor('red');">
+        <script>
+            function chBackcolor(color) {
+                document.body.style.background = color;
+            }
+        </script>
+
+
+        <div class="container">
+            <div class="bilde1 roterh">
+                <img class="bilde" src="https://github.com/AlexanderAW97/Gitkode/blob/main/IMG_0502.jpeg?raw=true"
+                    alt="">
+
+            </Div>
+            <Div class="hobby">
+                <p>Mine hobbyer består f.eks av</p>
+                <li><b>Musikk</b></li>
+                <li><b>Gaming</b></li>
+                <li><b>Kjøre bil</b></li>
+            </div>
+        </div>
+
+
+        <br><br><br><br>
+
+        <h1 class="counter-display">(0)</h1>
+        <button class="counter-minus">Gå et tall ned</button>
+        <button class="counter-plus">Gå et tall opp</button>
+
+        <script>
+            let counterDisplayElem = document.querySelector('.counter-display');
+            let counterMinusElem = document.querySelector('.counter-minus');
+            let counterPlusElem = document.querySelector('.counter-plus');
+
+            let count = 0;
+
+            updateDisplay();
+
+            counterPlusElem.addEventListener("click", () => {
+                count++;
+                updateDisplay();
+            });
+
+            counterMinusElem.addEventListener("click", () => {
+                count--;
+                updateDisplay();
+            });
+
+            function updateDisplay() {
+                counterDisplayElem.innerHTML = count;
+            };
+
+        </Script>
+
+
+
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
+</body>
+
+</html>
